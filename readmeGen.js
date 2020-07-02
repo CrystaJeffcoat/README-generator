@@ -1,63 +1,32 @@
-module.exports = {
-
-  initialQuestions: [
+module.exports = [
     {
       type: "input",
       name: "title",
-      message: "What is your project title?"
+      message: "Project title? "
     },
     {
         type: "input",
-        name: "description",
-        message: "Enter your project description: "
+        name: "Description",
+        message: "Project description? "
     },
     {
-      type: "checkbox",
-      message: "What would you like to include in your README?",
-      name: "content",
-      choices: [
-        "Table of Contents", 
-        "Installation", 
-        "Usage", 
-        "Credits",
-        "License",
-        "Contributing",
-      ]
-    }
-  ],
-  Installation: [
+        type: "input",
+        name: "Installation",
+        message: "Installation: "
+    },
     {
         type: "input",
-        name: "installation",
-        message: "Enter installation steps: "
-    }
-  ],
-  Usage: [
+        name: "Usage",
+        message: "Usage: "
+    },
     {
         type: "input",
-        name: "usage",
-        message: "Enter examples for usage: "
-    }
-  ],
-  Credits: [
+        name: "Contributing",
+        message: "Contributions: "
+    },
     {
         type: "input",
-        name: "credits",
-        message: "Enter credits you would like to include: "
+        name: "License",
+        message: "License: "
     }
-  ],
-  License: [
-    {
-        type: "input",
-        name: "license",
-        message: "Enter license information: "
-    }
-  ],
-  Contributing: [
-    {
-        type: "input",
-        name: "contributing",
-        message: "Enter contributing guidelines: "
-    }
-  ]
-}
+]
