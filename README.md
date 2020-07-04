@@ -14,4 +14,4 @@ When finished, a README.md will be generated with formatted results.
 
 ## Demo
 
-![demo](util/demo.gif)
+![demo](utils/demo.gif)
