@@ -1,7 +1,5 @@
 # README-generator
 
-## Description
-
 Easily create a README file for your repository using node cli.
 The result is a formatted and ready to go README for your repository.
 
