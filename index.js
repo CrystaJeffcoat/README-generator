@@ -8,7 +8,7 @@ const { keys } = require("./readmeGen.js");
 let username;
 let reponame;
 
-// Questions to retrieve username and repository name for github--
+// Questions to retrieve username and repository name for github --
 const userQuestions = [
 
     {
@@ -24,32 +24,33 @@ const userQuestions = [
     
 ];
 
-// Get user info for github API--
-// getRepo();
-// async function getRepo() {
-//     try {
-//         await inquirer
-//         .prompt(userQuestions)
-//         .then(function(res) {
-//             if ((res.username) && (res.reponame)) {
-//                 username = res.username
-//                 reponame = res.reponame
-//             }else {
-//                 console.log("Enter a valid username and repo");
-//             }
-//         });
+// Get user info from github API to generate badge --
+getRepo();
+async function getRepo() {
+    try {
+        await inquirer
+        .prompt(userQuestions)
+        .then(function(res) {
+            if ((res.username) && (res.reponame)) {
+                username = res.username
+                reponame = res.reponame
+            }else {
+                console.log("Enter a valid username and repo");
+            }
+        });
     
-//         const { data } = await axios.get(`https://api.github.com/repos/${username}/${reponame}/contents/`);
-//         console.log(data[0].name);
-//         getData();
-//     } catch (err) {
-//         console.log(err);
-//     }
-// }
+        const badge = `(https://img.shields.io/github/repo-size/${username}/${reponame})`;
+        formattedData.push("![GitHub repo size]" + badge)
+        console.log(formattedData)
+        getData();
+    } catch (err) {
+        console.log(err);
+    }
+}
 
-// Asks initial questions from readmeGen file-- Gets outline for readme
+// Asks initial questions from readmeGen file -- Gets outline for readme
 let formattedData = []
-getData();
+
 async function getData() {
     try {
         await inquirer
