@@ -1,9 +1,7 @@
 const fs = require("fs");
-const axios = require("axios");
 const inquirer = require("inquirer");
-const readmeQuestions = require("./readmeGen.js");
+const readmeQuestions = require("./utils/readmeGen");
 const generateMarkdown = require("./utils/generateMarkdown.js");
-const { keys } = require("./readmeGen.js");
 
 let username;
 let reponame;
